@@ -1,6 +1,17 @@
-/* * {
-    outline: 1px solid wheat;
-} */
+* {
+    /* outline: 1px solid wheat; */
+    transition: background 1s;
+}
+:root {
+    --dark-main-bg: rgb(19, 19, 19);
+    --light-main-bg: white;
+    --light-color: black;
+    --dark-color: white;
+    
+    --dark-second: rgb(40, 40, 40);
+    --light-second: grey;
+    --blue: rgb(16, 67, 139);
+}
 html {
     height: 100vh;
     padding: 0;
@@ -8,14 +19,11 @@ html {
 }
 body {
     min-height: 100vh;
-    margin: 0;
-    padding: 0;
-}
-body {
     min-width: 780px;
     margin: 0;
     padding: 0;
-    background-color: rgb(19, 19, 19);
+    background-color: var(--dark-main-bg);
+    
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     display: flex;
 
@@ -33,7 +41,7 @@ body {
     width: clamp(160px, 250px, 290px);
     
     flex: 1 1 auto;
-    color: whitesmoke;
+    
     
     background-image: linear-gradient(180deg, rgb(40, 40, 40), rgb(19, 19, 19));
     display: flex;
@@ -45,9 +53,10 @@ body {
     margin-right: min(2%, 20px);
 }
 .list {
+    
     margin-left: 0;
     padding: 50px;
-    padding-left: 20px;
+    padding-left: 30%;
     
 }
 .list ul {
@@ -58,9 +67,9 @@ body {
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-
+    color: var(--dark-color);
     background-color: rgb(16, 67, 139);
-    color: white;
+    
     font-size: 22px;
 
     border-radius: 3%;
@@ -78,16 +87,19 @@ body {
 .list li {
     width: 40px;
     height: 40px;
-    font-size: 32px;
+    font-size: 22px;
     list-style: none;
     margin-bottom: 60px;
+
 }
+
 .list a{
     padding: 0;
     box-sizing: border-box;
     transition: font-size 600ms;
     text-decoration: none;
-    color: white;
+    color: var(--dark-color);
+    
 }
 .list a:hover{
     color: rgb(16, 67, 135);
@@ -97,7 +109,7 @@ body {
 .right{
     flex: 2 1 auto;
     grid-column: 2;
-    color: wheat;
+    
     
     display: flex;
     flex-direction: column;
@@ -122,8 +134,8 @@ body {
     justify-content: space-evenly;
 }
 .header {
-   
-    color: white;
+   color: var(--dark-color);
+    
 }
 .main {
  
@@ -143,16 +155,19 @@ body {
     justify-content: space-around;
    
     box-sizing: border-box;
-    color: white;
+    color:  var(--light-main-bg);
     background-color: rgb(40, 40, 40);
     border-radius: 20px;
     height: 300px;
     padding: 15px;
+    /* filter: blur(2px); */
+   
 }
 .card h3{
     margin: 10px;
     text-transform: uppercase;
     text-decoration: underline;
+    filter: blur(0px);
 }
 .desc {
     max-width: 80%;
@@ -162,7 +177,7 @@ body {
 
 .sideline {
     min-width: clamp(150px, 15%,20%);
-    background-color: whitesmoke;
+    background-color:  var(--dark-color);
     color: rgb(16, 67, 135);;
     margin: 10% 0;
     border-radius: 20px 0 0 20px;
@@ -184,6 +199,13 @@ body {
 .footer {
     height: 10%;
     margin-bottom: 0;
-   
+    display: flex;
+   justify-content: center;
 }
 
+.theme {
+    background-color: white;
+    border-radius: 10%;
+    margin-top: 80%;
+    margin-left: 10%;
+}
