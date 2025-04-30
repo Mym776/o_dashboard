@@ -2,7 +2,7 @@ const theme = document.querySelector("#theme");
 const body = document.querySelector("body");
 const header = document.querySelector(".header")
 const card = document.querySelectorAll(".card")
-const sideline = document.querySelector(".sideline")
+const sideline = document.querySelector(".sideline, .sideline a")
 const sidelineP = document.querySelectorAll(".sideline p")
 const sidelineH = document.querySelectorAll(".sideline h2")
 

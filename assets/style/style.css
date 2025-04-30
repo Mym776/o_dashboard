@@ -169,6 +169,13 @@ body {
     text-decoration: underline;
     filter: blur(0px);
 }
+.link {
+    margin-top: 10%;
+}
+.card a{
+    text-decoration: none;
+    color: var(--dark-color);
+}
 .desc {
     max-width: 80%;
     font-stretch: condensed;
